@@ -1,0 +1,3 @@
+'''
+resolucion ejercicio 5
+'''
