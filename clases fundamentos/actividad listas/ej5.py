@@ -11,7 +11,7 @@ agregado en la lista.
 • Ver canasta, es mostrar todos los productos seleccionados.
 • Ver total, es mostrar el total a pagar por el cliente.
 '''
-productos = []
+
 opcion = 0
 while opcion != 4:
     print("1. Agregar productos")
@@ -19,6 +19,7 @@ while opcion != 4:
     print("3. Ver total")
     print("4. Salir")
     opcion = int(input("Elija una opcion: "))
+    productos = []
     match opcion:
         case 1:
             print("Agregar productos")
@@ -50,14 +51,14 @@ while opcion != 4:
             print("Ver canasta")
             if productos:
                 print("Productos en la canasta:")
-                for p in productos:
-                    print(f"- {p['nombre']}: ${p['precio']}")
+                for item in productos:
+                    print(f"- {item['nombre']}: ${item['precio']}")
             else:
                 print("La canasta está vacía.")
         case 3:
             print("Ver total")
             if productos:
-                total = sum(p['precio'] for p in productos)
+                total = sum(item['precio'] for item in productos)
                 print(f"Total a pagar: ${total}")
             else:
                 print("La canasta está vacía.")
@@ -67,4 +68,3 @@ while opcion != 4:
         case _:
             print("Opción no válida")
             print("Por favor, elija una opción del menú.")
-            
