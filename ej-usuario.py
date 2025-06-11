@@ -59,8 +59,9 @@ while opcion != 5:
             else:
                 print("Numero de tarea incorrecto.")
         case 5:
-            print("Saliendo...")
+            print("Saliendo.")
             opcion = 5
         case _:
             print("Opcion no valida.")
             print("Por favor, elija una opcion del menú.")
+
